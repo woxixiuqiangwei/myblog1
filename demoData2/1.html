@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+	<h1>查询</h1>
+	<input type="text" name="" class='searchId'>
+	<button id='idbtn'>点我查询</button>
+	<h2 class='showitem'></h2>
+	<hr>
+	<p>登录</p>
+	账号：<input type="text" name="" class='user'><br>
+	密码：<input type="password" name="" class='pwd'>
+	<button id='loginbtn'>点我登录</button>
+	<p>获取留言</p>
+	<input type="text" name="" class='page'><br>
+	<button id='getMsg'>点我获取留言</button>
+	<script type="text/javascript">
+		$('#idbtn').click(function(){
+			var Id=$('.searchId').val();
+			$.ajax('http://localhost:3000/getAllPhoto',{
+				data:{id:Id},
+				method:'post',
+				success(res){
+					if(!res[0]){
+						console.log(res.msg);
+						return false;
+					}
+					console.log(res); 
+					$('.showitem').html('学号：'+res[0].id+' 名字：'+res[0].name);
+				},
+				error(res){
+					alert('调用接口失败');
+				}
+
+			})
+		})
+		$('#loginbtn').click(function(){
+			var username=$('.user').val();
+			var pwd=$('.pwd').val();
+			$.post('http://localhost:3000/login',{username:username,password:pwd},function(res,status){
+				console.log(res);
+				alert(1);
+				// console.log(status);
+			})
+		})
+		$('#getMsg').click(function(){
+			var page=$('.page').val();
+			$.get('http://localhost:3000/getAllMessage?s='+page+'&n=9',function(res){
+				console.log(res);
+			})
+		})
+		$.get('http://localhost:2333/info',function(res){
+			// console.log(res);
+		})
+		function foo(a){
+			a = a * 10;
+		}
+		function bar(b){
+			b.value = 'new';
+		}
+		var a = 1;
+		var b = {value: 'old'};
+		foo(a);
+		bar(b);
+		console.log(a); // 1
+		console.log(b); // value: new...
+</script>
+</body>
+</html>
