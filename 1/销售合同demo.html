@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<head>
+	<title>销售合同demo</title>
+	<meta charset="utf-8" />
+	<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<meta content="width=device-width, initial-scale=1.0,user-scalable=0" name="viewport" />
+	 <script type="text/javascript">
+	 	document.documentElement.style.fontSize = document.documentElement.clientWidth /7.5 + 'px';
+	 	window.onresize=function(){
+	 	  	document.documentElement.style.fontSize = document.documentElement.clientWidth /7.5 + 'px';
+	 	}
+         
+         console.log( document.documentElement.clientWidth / 15);
+        // 1rem=100px
+    </script>
+	<style type="text/css">
+		/*html{
+			font-size: 50px;
+		}*/
+		*{margin:0; padding: 0;}
+		#main{		
+			margin:0 auto;
+			width:6.9rem;
+		}
+		#top{
+			height: 0.76rem;
+		}
+		#top .top_left,.top_right{
+			font-size: 0.26rem	
+		}
+		.top_left .icon1{
+			margin-right: 0.1rem;
+		}
+		.top_left{
+			float: left;
+			color:#828384;
+		}
+		.top_right{
+			float: right;
+		}
+		.top_left,.top_right{
+			margin-top: 0.24rem;
+		}
+		.top_right .icon1{
+		}
+		.top_right span{
+			color:#333333;
+		}
+		#middle{
+			height: 0.7rem;
+			background: #0079ff;
+		}
+		#middle ul{
+			height: 0.7rem;
+		}
+		#middle ul li{
+			color:#fff;
+			line-height: 0.7rem;
+		}
+		 ul li.same_li{
+			width: 20%;
+		}
+		 ul li.nosame_li{
+			flex:1;
+		}
+		ul.same_ul{
+			display: flex;
+			justify-content: center;
+		}	
+		ul.same_ul li{
+			list-style-type: none;
+			float:left;		
+			font-size: 0.28rem;
+			text-align: center;
+		}
+		#bottom ul{
+			height: 0.8rem;
+		}	
+		#bottom ul li{
+			line-height: 0.8rem;
+			height: 0.8rem;
+			border-bottom:0.01rem solid #e8e8e8;
+			color: #666;
+		}
+		#bottom ul li.right{
+			text-align:left;
+			text-indent: 0.5rem;
+		}
+		#bottom ul.same_ul:nth-child(odd){
+			background: #fff;
+		}
+		#bottom ul.same_ul:nth-child(even){
+			background: #f5faff;
+		}
+		#fixed_bottom{
+			position: fixed;
+			text-align: center;
+			bottom:0.2rem;
+			left:50%;
+			transform: translateX(-50%);
+		}
+		#fixed_bottom a{			
+			text-decoration: none;
+			font-size: 0.5rem
+		}
+	</style> 
+</head>
+<body>
+	<div id='main'>
+		<div id='top'>
+			<div class='top_left'>
+				<i class="fa fa-calendar icon1" aria-hidden="true"></i>
+				<span>2017年11月</span>
+			</div>
+			<div class='top_right'>
+				<span>筛选</span>
+				<i class="fa fa-share icon1"></i>
+			</div>
+		</div>
+		<div id='middle'>
+			<ul class='same_ul'>
+				<li class='same_li'>客户</li>
+				<li class='same_li'>类型</li>
+				<li class='nosame_li'>完成时间</li>
+				<li class='same_li'>金额</li>
+			</ul>
+		</div>
+		<div id="bottom">
+			<ul class='same_ul'>
+				<li class='same_li'>王明明</li>
+				<li class='same_li'>智忠宝</li>
+				<li class='nosame_li'>2017-11-31</li>
+				<li class='same_li'>920.00</li>
+			</ul>
+			<ul class='same_ul'>
+				<li class='same_li'>王强</li>
+				<li class='same_li'>智忠宝</li>
+				<li class='nosame_li'>2017-11-31</li>
+				<li class='same_li'>1830.00</li>				
+			</ul>
+			<ul class='same_ul'>
+				<li class='same_li'>王明明</li>
+				<li class='same_li'>智忠宝</li>
+				<li class='nosame_li'>2017-11-31</li>
+				<li class='same_li'>9985.00</li>				
+			</ul>
+			<ul class='same_ul'>
+				<li class='same_li'>王明明</li>
+				<li class='same_li right'>软件</li>
+				<li class='nosame_li'>2017-11-31</li>
+				<li class='same_li'>528.00</li>
+				
+			</ul>
+			<ul class='same_ul'>
+				<li class='same_li'>王明明</li>
+				<li class='same_li'>智忠宝</li>
+				<li class='nosame_li'>2017-11-31</li>
+				<li class='same_li'>98.00</li>			
+			</ul>
+			<ul class='same_ul'>
+				<li class='same_li'>王明明</li>
+				<li class='same_li'>智忠宝</li>
+				<li class='nosame_li'>2017-11-31</li>
+				<li class='same_li'>920.00</li>		
+			</ul>
+				<ul class='same_ul'>
+				<li class='same_li'>王明明</li>
+				<li class='same_li'>智忠宝</li>
+				<li class='nosame_li'>2017-11-31</li>
+				<li class='same_li'>1830.00</li>		
+			</ul>
+				<ul class='same_ul'>
+				<li class='same_li'>王明明</li>
+				<li class='same_li'>智忠宝</li>
+				<li class='nosame_li'>2017-11-31</li>
+				<li class='same_li'>9985.00</li>		
+			</ul>
+			<ul class='same_ul'>
+				<li class='same_li'>王明明</li>
+				<li class='same_li'>智忠宝</li>
+				<li class='nosame_li'>2017-11-31</li>
+				<li class='same_li'>528.00</li>				
+			</ul>
+		</div>
+		<div id="fixed_bottom">
+			<a href="">返回</a>
+		</div>
+	</div>
+</body>
+</html>
