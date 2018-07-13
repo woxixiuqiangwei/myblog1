@@ -1,3 +1,4 @@
+   window.onload=function(){
     getMsg('change',sessionStorage.getItem('category'));
     $('.navBar li').click(function(e){
         e.preventDefault();
@@ -119,4 +120,15 @@
             if (document.documentElement.scrollTop<= 0)
                 clearInterval(timer);
         },20)
+        alert(1);
     })
+    // var gotoTop=document.querySelector('#gotoTop');
+    //    gotoTop.ontouchstart=function() {
+    //     console.log(1);
+    //     var timer = setInterval(function() {
+    //    document.documentElement.scrollTop= document.documentElement.scrollTop-120;
+    //         if (document.documentElement.scrollTop<= 0)
+    //             clearInterval(timer);
+    //     },20)
+    // }
+}
