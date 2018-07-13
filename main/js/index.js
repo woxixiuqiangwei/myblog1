@@ -69,7 +69,7 @@
                             <img src="${res.data[i].image_url}">
                             </div>
                             <div class="col-xs-7">
-                            <a target=_blank href=${res.data[i].share_url} class="title">${res.data[i].title}</a>
+                            <a  href=${res.data[i].share_url} class="title">${res.data[i].title}</a>
                             <div class="info">
                             <span><span class="avatar"><img src="img/logo.jpg" ></span> ${res.data[i].source}</span> ⋅
                           
@@ -105,7 +105,7 @@
                              <div>
                                   <img src='http://${res.data[i].cover_image_url}'>
                               </div>
-                                <div class="title"><a href=https://www.toutiao.com/api/pc${res.data[i].article_url} target='_blank'>${res.data[i].title}</a></div>
+                                <div class="title"><a href=https://www.toutiao.com/api/pc${res.data[i].article_url} >${res.data[i].title}</a></div>
                                 <div class="desc">15k阅读 1k评论</div>
                             </div>
                 </div>`
