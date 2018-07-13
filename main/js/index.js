@@ -114,14 +114,13 @@
             console.log(res.data);
         }
     })
-    $('#gotoTop').click(function() {
-        var timer = setInterval(function() {
-       document.documentElement.scrollTop= document.documentElement.scrollTop-120;
-            if (document.documentElement.scrollTop<= 0)
-                clearInterval(timer);
-        },20)
-        alert(1);
-    })
+    // $('#gotoTop').click(function() {
+    //     var timer = setInterval(function() {
+    //    document.documentElement.scrollTop= document.documentElement.scrollTop-120;
+    //         if (document.documentElement.scrollTop<= 0)
+    //             clearInterval(timer);
+    //     },20)
+    // })
     // var gotoTop=document.querySelector('#gotoTop');
     //    gotoTop.ontouchstart=function() {
     //     console.log(1);
