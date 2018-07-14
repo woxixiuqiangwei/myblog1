@@ -158,9 +158,6 @@ img,
   border-color: #d50c37;
 }
 
-#toggle-checkbox:checked ~ div {
-  display: block !important;
-}
 
 #toggle-label {
   display: inline-block;
@@ -190,25 +187,65 @@ img,
    opacity:1;
 }
 @media (max-width: 500px){
-  body,a{
+  body,a,.weather{
     font-size:13px !important;
   }
   #gotoTop{
-    width:30px;
-   height:30px;
+    display: none;
   }
-
+  .fixed~.col-sm-7{
+      margin-left:0px !important; 
+ }
 }
 @media (max-width: 768px){
-  .hiddens{
-    display: none;
+     .header{
+    position: fixed;
+    width: 100%;
+    z-index: 777;
+  }
+  .header~div.container{
+    padding-top: 70px;
   }
 }
 .navBar li:hover{
   background-color:#ea0c3c; 
 
 }
-.active>a{
-  background: #ea0c3c !important;
-  color:#fff !important;
+.navBar li:hover a,.active>a{
+  background-color:#ea0c3c !important; 
+   color:#fff !important;
+
 }
+#toggle-checkbox:checked ~ div,#toggle-checkbox:checked ~ div ul:nth-child(1){
+  display: block !important;
+}
+ #toggle-checkbox~div ul:nth-child(1){
+      display: none ;
+  }
+
+ .siderBar{
+  font-size: 18px !important;
+ }
+ .fixed{
+  position: fixed;
+  top:10px;
+  z-index: 666;
+  width: 12% !important;
+ }
+ @media (min-width: 768px){
+   .fixed~.col-sm-7{
+    margin-left:16%; 
+   }
+    #toggle-checkbox:checked ~ div ul:nth-child(1){
+    display: none !important;
+    }
+ }
+.weather{
+  display: inline-block;
+  font-size:16px;
+  line-height: 50px;
+  margin:0 20px;
+
+}
+
+

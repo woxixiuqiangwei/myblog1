@@ -7,7 +7,7 @@
         }
         if(This=='change'){
             var active='.'+sessionStorage.getItem('category');
-             $(active).addClass('active');
+            $(active).addClass('active');
              console.log('刷新了')
         }
         if (This && This!='change' ) {
@@ -98,7 +98,12 @@
         }
         // console.log(Math.ceil(hei + $(document).scrollTop()));
         // console.log(document.documentElement.scrollHeight);
-
+        if($(document).scrollTop()>=100){
+            $('.siderBar').addClass('fixed');
+        }
+        else{
+            $('.siderBar').removeClass('fixed');
+        }
     })
     $.ajax('https://www.toutiao.com/api/pc/hot_gallery/?widen=1', {
         dataType: 'jsonp',
@@ -135,4 +140,11 @@
     //             clearInterval(timer);
     //     },20)
     // }
+    $.ajax('https://www.toutiao.com/stream/widget/local_weather/data/?city=温州',{
+        dataType:'jsonp',
+        success(res){
+            console.log(res.data.weather);
+            $('.header .weather').html('温州 '+res.data.weather.current_condition+' '+res.data.weather.low_temperature+' / '+res.data.weather.high_temperature);
+        }
+    })
 })
