@@ -1,32 +1,3 @@
-   window.onload=function(){
-    getMsg('change',sessionStorage.getItem('category'));
-    $('.navBar li').click(function(e){
-        e.preventDefault();
-    })
-    $('.__all__').click(function() {
-        getMsg($(this), '__all__');
-    })
-    $('.news_sports').click(function() {
-        getMsg($(this), 'news_sports');
-    })
-    $('.news_tech').click(function() {
-        getMsg($(this),  'news_tech');
-    })
-    $('.news_entertainment').click(function() {
-        getMsg($(this), 'news_entertainment');
-    })
-    $('.news_game').click(function() {
-        getMsg($(this),  'news_game');
-    })
-    $('.news_finance').click(function() {
-        getMsg($(this),  'news_finance');
-    })
-    $('.news_hot').click(function() {
-        getMsg($(this),  'news_hot');
-    })
-    $('.news_car').click(function() {
-        getMsg($(this), 'news_car');
-    })
 
     function getMsg(This, category) {
         if(!category){
@@ -83,6 +54,40 @@
             }
         })
     }
+ getMsg('change',sessionStorage.getItem('category'));
+   $(function(){ 
+    // document.documentElement.scrollTop=sessionStorage.getItem('s');
+    $('.navBar li').click(function(e){
+        e.preventDefault();
+    })
+    // $('.news-list').on('click','div',function(){
+        // sessionStorage.setItem('s',$(this).offset().top);
+    // })
+    $('.__all__').click(function() {
+        getMsg($(this), '__all__');
+    })
+    $('.news_sports').click(function() {
+        getMsg($(this), 'news_sports');
+    })
+    $('.news_tech').click(function() {
+        getMsg($(this),  'news_tech');
+    })
+    $('.news_entertainment').click(function() {
+        getMsg($(this), 'news_entertainment');
+    })
+    $('.news_game').click(function() {
+        getMsg($(this),  'news_game');
+    })
+    $('.news_finance').click(function() {
+        getMsg($(this),  'news_finance');
+    })
+    $('.news_hot').click(function() {
+        getMsg($(this),  'news_hot');
+    })
+    $('.news_car').click(function() {
+        getMsg($(this), 'news_car');
+    })
+
     var hei = document.documentElement.clientHeight;
     console.log(hei);
     $(document).scroll(function() {
@@ -114,14 +119,14 @@
             console.log(res.data);
         }
     })
-    // $('#gotoTop').click(function() {
-    //     var timer = setInterval(function() {
-    //    document.documentElement.scrollTop= document.documentElement.scrollTop-120;
-    //         if (document.documentElement.scrollTop<= 0)
-    //             clearInterval(timer);
-    //     },20)
-    // })
-    // var gotoTop=document.querySelector('#gotoTop');
+    $('#gotoTop').click(function() {
+        var timer = setInterval(function() {
+       document.documentElement.scrollTop= document.documentElement.scrollTop-120;
+            if (document.documentElement.scrollTop<= 0)
+                clearInterval(timer);
+        },20)
+    })
+    // var gotoTop=document.getElementById('#gotoTop');
     //    gotoTop.ontouchstart=function() {
     //     console.log(1);
     //     var timer = setInterval(function() {
@@ -130,4 +135,4 @@
     //             clearInterval(timer);
     //     },20)
     // }
-}
+})
