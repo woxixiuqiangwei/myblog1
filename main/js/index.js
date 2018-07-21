@@ -56,7 +56,7 @@ function getMsg(This, category) {
     })
 }
 getMsg('change', sessionStorage.getItem('category'));
-$(function() {
+$(function(){
     $('.navBar li').click(function(e) {
         e.preventDefault();
     })
@@ -107,13 +107,13 @@ $(function() {
     })
     $.ajax('https://www.toutiao.com/api/pc/hot_gallery/?widen=1', {
         dataType: 'jsonp',
-        success(res) {
+        success:function(res) {
             var str = '';
             for (var i in res.data) {
                 str = str + `<div class="list">
                 <div class="item">
                 <div>
-                <img src='http://${res.data[i].cover_image_url}'>
+                <img src='http:${res.data[i].cover_image_url}'>
                 </div>
                 <div class="title"><a target=_blank href=https://www.toutiao.com/api/pc${res.data[i].article_url} >${res.data[i].title}</a></div>
                 <div class="desc">15k阅读 1k评论</div>
