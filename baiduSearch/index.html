@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>
+	<title>百度一下，你就知道
 	</title>
 	<meta name='viewport' content="width=device-width,user-sacable=no,initial-scale=1">
 	<style>
@@ -50,7 +50,7 @@
 	}
 
 </style>
-<script type="text/javascript" src='https://cdn.bootcss.com/jquery/1.12.1/jquery.min.js'></script>
+
 <script type="text/javascript">
 	document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
         // 1rem=100px
@@ -77,6 +77,9 @@
 				var script=document.createElement('script');
 				script.src='https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd='+val+'&cb=hd';
 				document.body.appendChild(script);
+			}
+			else{
+				oul.innerHTML='';
 			}
 		}
 		//wd=就是我们输入的关键字，cb=就是函数名
