@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+	</title>
+	<meta name='viewport' content="width=device-width,user-sacable=no,initial-scale=1">
+	<style>
+
+	#hd{width: 600px;margin:0 auto;text-align: center;background: pink;}
+	ul{
+		margin:0;
+		padding: 0;
+	}
+	ul li{
+		list-style: none;
+		margin:10px 0px;
+		font-size: 0.4rem ;
+
+	}
+	ul li a{
+		text-decoration: none;
+		color:black;
+
+	}
+	#hd input{
+		border-radius: 10px;
+		width: 100%;
+		height: 0.8rem;
+		font-size: 0.4rem ;
+	}
+	#hd input:focus{		
+		outline: none;
+		border-color: lightblue;
+	}
+	#hd img{
+		max-width: 100%;
+	}
+	@media (min-width: 768px){
+		#hd ul li {
+			font-size: 25px !important;
+
+		}
+	}
+	@media (max-width: 768px){
+		#hd {
+			width: 100%;
+		}
+
+	}
+
+</style>
+<script type="text/javascript" src='https://cdn.bootcss.com/jquery/1.12.1/jquery.min.js'></script>
+<script type="text/javascript">
+	document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+        // 1rem=100px
+        window.onresize=function(){
+        	document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+        }
+
+    </script>
+</head>
+<body>
+	<div id='hd'>
+		<img src="1.gif">
+		<input type="text" id='sear' placeholder="请输入你想要的东西">
+		<ul>
+			
+		</ul>
+
+	</div>
+	<script>
+		var oul=document.getElementsByTagName('ul')[0];
+		sear.onkeyup=function(){
+			var val=this.value.trim();
+			if(val.length>0){
+				var script=document.createElement('script');
+				script.src='https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd='+val+'&cb=hd';
+				document.body.appendChild(script);
+			}
+		}
+		//wd=就是我们输入的关键字，cb=就是函数名
+		function hd(data){
+			//data是一个数据集合
+			//data.s是集合中的内容
+			console.log(data.s);
+			var key=data.s;//data.s是数组
+			oul.innerHTML='';
+			key.forEach(function(el,index){
+				// console.log(el);
+				var oli=document.createElement('li');
+				oli.innerHTML="<a href=http://www.baidu.com/s?wd="+el+" target=_blank>"+' '+el+' '+"</a>";
+				oul.appendChild(oli);
+			})
+		}
+	</script>
+</body>
+</html>
