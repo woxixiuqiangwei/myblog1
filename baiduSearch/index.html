@@ -18,12 +18,14 @@
 		list-style: none;
 		margin:0.2rem 0px;
 		font-size: 0.4rem ;
-
+		
+	}
+	ul li:nth-child(1){
+		clear:both;
 	}
 	ul li a{
 		text-decoration: none;
 		color:black;
-
 	}
 	#hd input{
 		width: 73%;
@@ -65,7 +67,10 @@
 		}
 
 	}
-
+	#hd .main{
+		width: 85%;
+		margin: 0 auto;
+	}
 </style>
 
 <script type="text/javascript">
@@ -80,8 +85,11 @@
 <body>
 	<div id='hd'>
 		<img src="1.png">
-		<input type="text" id='sear' placeholder="请输入你想要的东西">
+		<div class='main'>
+			<input type="text" id='sear' placeholder="请输入你想要的东西">
 		<button>百度一下</button>
+		</div>
+
 		<ul>
 			
 		</ul>
