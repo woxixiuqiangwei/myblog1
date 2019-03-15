@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>高财打击预览页</title>
+	<style>
+		#gcBox{
+			width: 760px;
+			border:1px solid black;
+			margin: 20px auto;
+			text-align: center;
+		}
+		.gcdescript{
+			text-align: left;
+			margin-left:250px;
+		}
+		.gcdescript p span{
+			letter-spacing: 2em;
+		}
+		table{
+			border:1px solid black;
+			border-collapse: collapse;
+			margin:0px auto 30px;
+		}
+		table tr td{
+			padding: 8px;
+			border: 1px solid black;	
+		}
+		table tr td p{
+			text-align: center !important;
+			font-size: 15px !important;
+		}
+		table tr:nth-of-type(3) td:nth-of-type(2) p{
+			text-align: left !important;
+		}
+		table tr td p b{
+			font-size: 18px;
+		}
+		#demo{
+			margin-top:30px
+		}
+		#demo table{
+			width: 88%;
+		}
+		.btn{
+			text-align: center;
+			margin-bottom: 30px;
+		}
+		.btn>*{
+			padding:16px 35px;
+			margin:12px;
+			background: #ddd;
+			border-radius: 5px;
+		}
+		.w-e-text-container{
+			height:400px !important;
+		}
+	</style>
+</head>
+<body>
+	<div id="gcBox">
+		<h2>高财指令</h2>
+		<div class='gcdescript'>
+			<p>下发时间：2018-12-02</p>
+		</div>
+		<div class='gcdescript'>
+			<p><span>姓</span>名：章XX</p>
+		</div>
+		<div class='gcdescript'>
+			<p>身份证号：33025202541512412</p>
+		</div>
+		<div class='gcdescript'>
+			<p><span>性</span>别：男</p>
+		</div>
+		<div class='gcdescript'>
+			<p>嫌疑指数：156.23分</p>
+		</div>
+		<div class='gcdescript'>
+			<p>指令单位：刑事侦查大队</p>
+		</div>
+		<div class='gcdescript'>
+			<p>抓获时间：2018-12-12</p>
+		</div>
+		<div class='gcdescript'>
+			<p>案件类型：入户盗窃</p>
+		</div>
+		<div class='gcdescript'>
+			<p>处理结果：刑拘</p>
+		</div>
+		<div class='gcdescript'>
+			<p><span>移</span>诉：已移诉</p>
+		</div>
+		<!-- -----下面这个div是放高财表格的,不要删掉-------- -->
+		<div id=demo>	</div>
+	</div>
+	<script>
+		// 这句代码是测试 出现的表格 样式 是否正确，测试完之后删掉。 
+		demo.innerHTML=sessionStorage.getItem('gcTable');
+	</script>
+</body>
+</html>
